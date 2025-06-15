@@ -1,4 +1,4 @@
-# 🧠 Prepwise
+#  Prepwise
 
 **Prepwise** is an AI-powered job interview preparation platform with real-time voice-based interactions. Users can practice interviews using AI voice agents, receive structured feedback via LLMs, and track progress through a dashboard.
 
@@ -45,7 +45,7 @@ Prepwise enables users to:
 
 ---
 
-## 🔋 Key Features
+##  Key Features
 
 - Real-time mock interviews via voice
 - LLM-based question generation and feedback
@@ -55,8 +55,7 @@ Prepwise enables users to:
 - Modular, reusable code architecture
 
 ---
-
-## 🧪 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -71,34 +70,57 @@ Prepwise enables users to:
 git clone https://github.com/yourusername/prepwise.git
 cd prepwise
 npm install
-Create a .env.local file with your credentials:
+```
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory and add the following:
+
+```env
 NEXT_PUBLIC_VAPI_WEB_TOKEN=
 NEXT_PUBLIC_VAPI_WORKFLOW_ID=
 GOOGLE_GENERATIVE_AI_API_KEY=
 NEXT_PUBLIC_BASE_URL=
+
 NEXT_PUBLIC_FIREBASE_API_KEY=
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
 NEXT_PUBLIC_FIREBASE_PROJECT_ID=
 NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
 NEXT_PUBLIC_FIREBASE_APP_ID=
+
 FIREBASE_PROJECT_ID=
 FIREBASE_CLIENT_EMAIL=
 FIREBASE_PRIVATE_KEY=
-Run the development server:
+```
 
-bash
-Copy
-Edit
+> Replace the placeholder values with your actual credentials from [Firebase](https://firebase.google.com/), [Vapi](https://vapi.ai), and [Google AI Studio](https://makersuite.google.com/).
+
+### Start the Development Server
+
+```bash
 npm run dev
-Visit http://localhost:3000 in your browser.
+```
 
-Project Structure
-├── app/                  # Routing and pages
-├── components/           # UI components
-├── constants/            # Tech stack and role mappings
-├── firebase/             # Firebase config
-├── lib/                  # Feedback prompt logic, LLM utilities
-├── public/               # Assets (icons, covers)
-├── types/                # TypeScript interfaces
-└── .env.local            # Environment variables (not committed)
+Then open your browser at:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🗂️ Project Structure
+
+```
+prepwise/
+├── app/                  # Routing and pages (Next.js App Router)
+├── components/           # Reusable UI components
+├── constants/            # Role and stack mappings
+├── firebase/             # Firebase configuration and init
+├── lib/                  # Prompt generation, feedback logic, utils
+├── public/               # Static assets and icons
+├── types/                # TypeScript models and interfaces
+└── .env.local            # Environment variables (ignored by Git)
+```
+
